@@ -15,7 +15,7 @@ using namespace std;
 TEST_CASE("Test for correct work of algorithm") {
     const char * s_file = "source.bin";
     const char * o_file = "0.bin";
-    const int n = 100000;
+    const int n         = 30000;
 
 
     FILE * s = fopen(s_file, "wb");

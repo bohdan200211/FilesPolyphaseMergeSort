@@ -8,5 +8,5 @@ file(GLOB_RECURSE SOURCE_FILES
 
 add_library(PolyphaseSortLib STATIC ${HEADER_FILES} ${SOURCE_FILES})
 
-target_include_directories(PolyphaseSortLib PUBLIC Sort)
+target_include_directories(PolyphaseSortLib PUBLIC PolyphaseSort)
 

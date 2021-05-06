@@ -16,14 +16,14 @@ using namespace std;
 
 class Heap {
 private:
-    struct abc {
+    struct Chunk {
         int    MinValue;
         FILE * File;
         int    iteration;
     };
     int   capacity;
     int   size;
-    abc * heap;
+    Chunk * heap;
 
     int parent(int i) { return (i - 1)/2;}
     int left(int i)   { return i*2 + 1;}
@@ -50,7 +50,7 @@ public:
     Heap(int n_size) {
         capacity = n_size;
         size     = 0;
-        heap     = new abc[n_size];
+        heap     = new Chunk[n_size];
     }
 
     ~Heap() {
@@ -69,8 +69,10 @@ public:
             || root > heap[0].MinValue) {
 
 
-            if(root > heap[0].MinValue)
+            if(root > heap[0].MinValue) {
                 fseek(heap[0].File, -n_size, SEEK_CUR);
+            }
+
             heap[0].MinValue = INT32_MAX;
         }
         heapify(0);

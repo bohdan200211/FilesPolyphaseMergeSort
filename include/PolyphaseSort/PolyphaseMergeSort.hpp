@@ -9,7 +9,7 @@
 class PolyphaseMergeSort {
 public:
     static void SortFile (const char * SourceFile,
-                          int num_of_files, int num_of_elements, int num_el_in_chunk);
+                          int AmountOfFiles, int AmountOfElms, int AmountOfElmsInChunk);
 
     static bool isSorted (const char * file);
 
@@ -19,9 +19,9 @@ private:
 
 
 
-    static void FilesInit (const char * SourceFile, int size_SetOfFiles,
+    static void FilesInit (const char * SourceFile, int AmountOfChunks,
                            FILE ** SetOfFiles,
-                           const int * f_split, int num_elm_in_chunk, int num_of_elements);
+                           const int * AmountOfChunksInFile, int AmountOfElmsInChunk, int AmountOfElms);
 
     static int * CreateSplitList (int num_of_files, int num_of_chunks);
 

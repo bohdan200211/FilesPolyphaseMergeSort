@@ -13,17 +13,16 @@ using namespace std;
 int main() {
     const char * s_file = "source.bin";
     const char * o_file = "0.bin";
-    const int n = 10000;
+    const int n = 28;
 
 
     FILE * s = fopen(s_file, "wb");
-    FILE * output = fopen(o_file, "rb");
 
 
 
     int RandomNumber;
     for (int i = n; i > 0; i--) {
-        RandomNumber = rand() % 1000; //module?
+        RandomNumber = rand() % 100; //module?
         fwrite(&RandomNumber, sizeof(int), 1, s);
     }
     fclose(s);
@@ -31,7 +30,7 @@ int main() {
 
 
     auto start = steady_clock::now();
-    PolyphaseMergeSort::SortFile(s_file, 5, n, 3300);
+    PolyphaseMergeSort::SortFile(s_file, 4, n, 3);
     auto end = steady_clock::now();
 
 
