@@ -8,11 +8,16 @@
 using namespace std::chrono;
 using namespace std;
 
+template<typename Type>
+void PrintArr (arr<Type> & A, const int n) {
+    for (int i = 0; i < n; ++i) {
+        std::cout << A[i] << ' ';
+    }
+    std::cout << std::endl;
+}
 
 
-
-
-TEST_CASE("Test for correct work of algorithm") {
+/*TEST_CASE("Test for correct work of algorithm") {
     const char * s_file = "source.bin";
     const char * o_file = "0.bin";
     const int n         = 30000;
@@ -50,4 +55,24 @@ TEST_CASE("Test for correct work of algorithm") {
 
 
     CHECK(isCorrect);
+}*/
+
+
+TEST_CASE("Test ConcurrencySort") {
+    const int n = 500;
+
+    arr<int> in (n);
+    arr<int> out (n);
+
+    for (int i = 0; i < n; ++i) {
+        in[i] = n - i;
+    }
+
+    //    print "arr"
+    PrintArr(in, n);
+
+    MergeSort<int>::Sort(in, 0, n - 1, out);
+
+//    print "out"
+    PrintArr(out, n);
 }
