@@ -5,6 +5,7 @@
 #pragma once
 
 #include "../SpecialHeap/heap.hpp"
+#include "../SortArray/MergeSort.hpp"
 
 class PolyphaseMergeSort {
 public:
