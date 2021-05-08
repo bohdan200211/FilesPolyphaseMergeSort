@@ -8,7 +8,7 @@ const char * PolyphaseMergeSort::extension  = ".bin";
 int          PolyphaseMergeSort::iterations = 1;
 
 void PolyphaseMergeSort::SortFile(const char * SourceFile, const int AmountOfFiles, const int AmountOfElms,
-                                  const int AmountOfElmsInChunk) {
+                                  const int AmountOfElmsInChunk, int AmountOfThread) {
 
     iterations = 1;
 
@@ -18,7 +18,9 @@ void PolyphaseMergeSort::SortFile(const char * SourceFile, const int AmountOfFil
     int * AmountOfChunksInFile = CreateSplitList(AmountOfFiles, num_of_chunks);
     FILE ** SetOfFiles         = CreatePtrFilesByAmount(AmountOfFiles);
 
-    FilesInit(SourceFile, AmountOfFiles, SetOfFiles, AmountOfChunksInFile, AmountOfElmsInChunk, AmountOfElms);
+    FilesInit(SourceFile, AmountOfFiles, SetOfFiles,
+              AmountOfChunksInFile, AmountOfElmsInChunk, AmountOfElms,
+              AmountOfThread);
 
     int indexEmptyFile = (iterations - 1) % AmountOfFiles;
     int indexMinFile   = (indexEmptyFile - 1) % AmountOfFiles;
@@ -45,9 +47,9 @@ void PolyphaseMergeSort::SortFile(const char * SourceFile, const int AmountOfFil
         for (int a = 0; a < minAmountOfChunkInFile; a++) {
             for (int i = 0; i < AmountOfFiles; i++) {
                 if(fread(&temp, n_size, 1, SetOfFiles[i]))
-                    heap.Insert(temp, SetOfFiles[i], minAmountOfChunkInFile);
+                    heap.Insert(temp, SetOfFiles[i]);
                 else
-                    heap.Insert(INT32_MAX, SetOfFiles[i], 0);
+                    heap.Insert(INT32_MAX, SetOfFiles[i]);
             }
             while (!heap.isEmpty()) {
                 temp = heap.GetMinimum();
@@ -99,10 +101,11 @@ bool PolyphaseMergeSort::isSorted(const char * file) {
 
 //private part
 void PolyphaseMergeSort::FilesInit(const char * SourceFile, int AmountOfChunks, FILE ** SetOfFiles,
-                                   const int * AmountOfChunksInFile, const int AmountOfElmsInChunk, const int AmountOfElms) {
+                                   const int * AmountOfChunksInFile, const int AmountOfElmsInChunk,
+                                   const int AmountOfElms, int AmountOfThread) {
 
 
-    int Buffer[AmountOfElmsInChunk];
+    auto * Buffer = new int [AmountOfElmsInChunk];
     int MinElmOfCurrChunk;
     int MaxElmOfPrevChunk  = INT32_MAX;
     int i                  = 0;
@@ -110,7 +113,6 @@ void PolyphaseMergeSort::FilesInit(const char * SourceFile, int AmountOfChunks, 
 
     FILE * source = fopen(SourceFile, "rb");
 
-    //multithreaded variables
 
 
 
@@ -122,9 +124,10 @@ void PolyphaseMergeSort::FilesInit(const char * SourceFile, int AmountOfChunks, 
                 goto l_out;
             }
 
-            fread(&Buffer, n_size, AmountOfElmsInChunk, source);
+            fread(Buffer, n_size, AmountOfElmsInChunk, source);
 
-            std::sort(Buffer, Buffer + AmountOfElmsInChunk);
+            MergeSort<int>::Sort(Buffer, 0, AmountOfElmsInChunk, AmountOfThread);
+//            std::sort(Buffer, Buffer + AmountOfElmsInChunk);
 
             MinElmOfCurrChunk = Buffer[0];
 
@@ -168,6 +171,8 @@ void PolyphaseMergeSort::FilesInit(const char * SourceFile, int AmountOfChunks, 
 
         fwrite(&Buffer, n_size, residualElms, SetOfFiles[i]);
     }
+
+    delete [] Buffer;
 }
 
 int * PolyphaseMergeSort::CreateSplitList (const int num_of_files, const int num_of_chunks) {
@@ -201,7 +206,7 @@ FILE ** PolyphaseMergeSort::CreatePtrFilesByAmount (const int n) {
     FILE ** set_of_filenames = new FILE* [n];
 
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; ++i) {
         set_of_filenames[i] = fopen(GetFilenameByNumber(i), "wb");
     }
 
@@ -209,7 +214,11 @@ FILE ** PolyphaseMergeSort::CreatePtrFilesByAmount (const int n) {
 }
 
 const char * PolyphaseMergeSort::GetFilenameByNumber (int number) {
-    int length = int(log10(number + 1) + 1);
+    if (number == 0) {
+        return "0.bin";
+    }
+
+    int length = int(log10(number) + 1);
 
 
     //length + ".bin" + \'0'
