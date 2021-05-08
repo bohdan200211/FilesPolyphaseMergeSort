@@ -8,33 +8,26 @@
 using namespace std::chrono;
 using namespace std;
 
-template<typename Type>
-void PrintArr (arr<Type> & A, const int n) {
-    for (int i = 0; i < n; ++i) {
-        std::cout << A[i] << ' ';
-    }
-    std::cout << std::endl;
-}
 
 
-/*TEST_CASE("Test for correct work of algorithm") {
+
+/*TEST_CASE("Test for correct work of algorithm") try {
     const char * s_file = "source.bin";
     const char * o_file = "0.bin";
-    const int n         = 30000;
+    const int n         = 30000000;
 
 
-    FILE * s = fopen(s_file, "wb");
-    FILE * output = fopen(o_file, "rb");
+    FILE * source = fopen(s_file, "wb");
 
 
-    int RandomNumber;
+   int RandomNumber;
     for (int i = n; i > 0; i--) {
-        RandomNumber = rand() % 1000; //module?
-        fwrite(&RandomNumber, sizeof(int), 1, s);
+        RandomNumber = rand(); //module?
+        fwrite(&RandomNumber, sizeof(int), 1, source);
     }
-    fclose(s);
+    fclose(source);
 
-
+    std::cout << "finished filling\n";
 
 
 
@@ -43,7 +36,7 @@ void PrintArr (arr<Type> & A, const int n) {
 
 
     auto start = steady_clock::now();
-    PolyphaseMergeSort::SortFile(s_file, 5, n, 3300);
+    PolyphaseMergeSort::SortFile(s_file, 6, n, 1000000);
     auto end = steady_clock::now();
 
 
@@ -55,24 +48,32 @@ void PrintArr (arr<Type> & A, const int n) {
 
 
     CHECK(isCorrect);
+} catch (const exception & ex) {
+    std::cout << ex.what();
 }*/
 
 
-TEST_CASE("Test ConcurrencySort") {
-    const int n = 3;
 
-    arr<int> in (n);
-    arr<int> out (n);
+TEST_CASE("Test ConcurrencySort") {
+    const int n = 1000000 ;
+
+    auto * in = new int [n];
 
     for (int i = 0; i < n; ++i) {
-        in[i] = n - i;
+        in[i] = random();
     }
 
-    //    print "arr"
-    PrintArr(in, n);
+//    MergeSort<int>::PrintArr(in, n);
 
-    MergeSort<int>::Sort(in, 0, n - 1, out);
 
-//    print "out"
-    PrintArr(out, n);
+
+    auto start = steady_clock::now();
+    MergeSort<int>::Sort(in, 0, n - 1, 8);
+    auto end = steady_clock::now();
+
+//    MergeSort<int>::PrintArr(in, n);
+
+    std::cout << "end sort " << (duration_cast<microseconds>(end - start).count()) << std::endl;
+
+    CHECK(MergeSort<int>::isSorted(in, n));
 }
