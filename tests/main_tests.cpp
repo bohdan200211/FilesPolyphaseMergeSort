@@ -11,13 +11,13 @@ using namespace std;
 
 
 
-/*TEST_CASE("Test for correct work of algorithm") try {
+TEST_CASE("Test for correct work of algorithm") try {
     const char * s_file = "source.bin";
     const char * o_file = "0.bin";
     const int n         = 30000000;
 
 
-    FILE * source = fopen(s_file, "wb");
+    /*FILE * source = fopen(s_file, "wb");
 
 
    int RandomNumber;
@@ -25,7 +25,7 @@ using namespace std;
         RandomNumber = rand(); //module?
         fwrite(&RandomNumber, sizeof(int), 1, source);
     }
-    fclose(source);
+    fclose(source);*/
 
     std::cout << "finished filling\n";
 
@@ -36,7 +36,7 @@ using namespace std;
 
 
     auto start = steady_clock::now();
-    PolyphaseMergeSort::SortFile(s_file, 6, n, 1000000);
+    PolyphaseMergeSort::SortFile(s_file, 6, n, 1000000, 8);
     auto end = steady_clock::now();
 
 
@@ -50,11 +50,11 @@ using namespace std;
     CHECK(isCorrect);
 } catch (const exception & ex) {
     std::cout << ex.what();
-}*/
+}
 
 
 
-TEST_CASE("Test ConcurrencySort") {
+/*TEST_CASE("Test ConcurrencySort") {
     const int n = 1000000 ;
 
     auto * in = new int [n];
@@ -76,4 +76,4 @@ TEST_CASE("Test ConcurrencySort") {
     std::cout << "end sort " << (duration_cast<microseconds>(end - start).count()) << std::endl;
 
     CHECK(MergeSort<int>::isSorted(in, n));
-}
+}*/
