@@ -59,7 +59,7 @@ void PrintArr (arr<Type> & A, const int n) {
 
 
 TEST_CASE("Test ConcurrencySort") {
-    const int n = 500;
+    const int n = 3;
 
     arr<int> in (n);
     arr<int> out (n);
