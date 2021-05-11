@@ -4,31 +4,40 @@
 
 #pragma once
 
-#include "../SpecialHeap/Heap.hpp"
+#include <cmath>
+
+#include "../SpecialHeap/BinaryHeap.hpp"
 #include "../SortArray/MergeSort.hpp"
 
+
+template<typename IntegerType>
 class PolyphaseMergeSort {
 public:
+    enum class Sort {Sort1, Sort2};
+
     static void SortFile (const char * SourceFile,
-                          int AmountOfFiles, int AmountOfElms, int AmountOfElmsInChunk,
-                          int AmountOfThread);
+                          size_t AmountOfFiles, size_t AmountOfElms, size_t AmountOfElmsInChunk,
+                          size_t AmountOfThread, Sort version = Sort::Sort2);
 
     static bool isSorted (const char * file);
 
 private:
     static const char * extension;
-    static int          iterations;
+    static size_t       iterations;
+    static const size_t numSize;
 
 
 
-    static void FilesInit (const char * SourceFile, int AmountOfChunks,
+    static void FilesInit (const char * SourceFile, size_t AmountOfChunks,
                            FILE ** SetOfFiles,
-                           const int * AmountOfChunksInFile, int AmountOfElmsInChunk, int AmountOfElms,
-                           int AmountOfThread);
+                           const size_t * AmountOfChunksInFile, size_t AmountOfElmsInChunk, size_t AmountOfElms,
+                           size_t AmountOfThread, Sort version = Sort::Sort2);
 
-    static int * CreateSplitList (int num_of_files, int num_of_chunks);
+    static size_t * CreateSplitList (size_t AmountOfFiles, size_t AmountOfChunks);
 
-    static FILE ** CreatePtrFilesByAmount (int n);
+    static FILE ** CreatePtrFilesByAmount (size_t n);
 
-    static const char * GetFilenameByNumber (int num);
+    static const char * GetFilenameByNumber (size_t num);
 };
+
+#include "PolyphaseMergeSort.inl"
