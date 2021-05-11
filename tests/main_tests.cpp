@@ -14,7 +14,7 @@ using namespace std;
 TEST_CASE("Test for correct work of algorithm") try {
     const char * s_file = "source.bin";
     const char * o_file = "0.bin";
-    const int n         = 3000000;
+    const int n         = std::pow(2, 20);
 
 
     FILE * source = fopen(s_file, "wb");
@@ -36,7 +36,7 @@ TEST_CASE("Test for correct work of algorithm") try {
 
 
     auto start = steady_clock::now();
-    PolyphaseMergeSort<int>::SortFile(s_file, 6, n, 100000, 8, PolyphaseMergeSort<int>::Sort::Sort2);
+    PolyphaseMergeSort<int>::SortFile(s_file, 6, n, 10000, 8, PolyphaseMergeSort<int>::Sort::Sort1);
     auto end = steady_clock::now();
 
 
