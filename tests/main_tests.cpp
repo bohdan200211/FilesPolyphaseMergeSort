@@ -20,7 +20,7 @@ TEST_CASE("Test for correct work of algorithm") try {
     FILE * source = fopen(s_file, "wb");
 
 
-   int RandomNumber;
+    int RandomNumber;
     for (int i = n; i > 0; i--) {
         RandomNumber = rand(); //module?
         fwrite(&RandomNumber, sizeof(int), 1, source);

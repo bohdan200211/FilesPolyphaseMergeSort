@@ -125,10 +125,10 @@ void PolyphaseMergeSort<IntegerType>::FilesInit(const char * SourceFile, size_t 
 
 
     auto * Buffer = new IntegerType [AmountOfElmsInChunk];
-    size_t MinElmOfCurrChunk;
-    size_t MaxElmOfPrevChunk  = INT32_MAX;
-    size_t i                  = 0;
-    size_t AmountOfFullChunks = AmountOfElms / AmountOfElmsInChunk;
+    size_t      MinElmOfCurrChunk;
+    IntegerType MaxElmOfPrevChunk  = std::numeric_limits<IntegerType>::max();
+    size_t      i                  = 0;
+    size_t      AmountOfFullChunks = AmountOfElms / AmountOfElmsInChunk;
 
     FILE * source = fopen(SourceFile, "rb");
 
@@ -153,7 +153,7 @@ void PolyphaseMergeSort<IntegerType>::FilesInit(const char * SourceFile, size_t 
 
             MinElmOfCurrChunk = Buffer[0];
 
-            if (MaxElmOfPrevChunk != INT32_MAX && MaxElmOfPrevChunk < MinElmOfCurrChunk) {
+            if (MaxElmOfPrevChunk != std::numeric_limits<IntegerType>::max() && MaxElmOfPrevChunk < MinElmOfCurrChunk) {
                 Buffer[0] = MaxElmOfPrevChunk;
 
                 fseek(SetOfFiles[i], -numSize, SEEK_CUR);
@@ -163,7 +163,7 @@ void PolyphaseMergeSort<IntegerType>::FilesInit(const char * SourceFile, size_t 
 
             MaxElmOfPrevChunk = Buffer[AmountOfElmsInChunk - 1];
         }
-        MaxElmOfPrevChunk = INT32_MAX;
+        MaxElmOfPrevChunk = std::numeric_limits<IntegerType>::max();
         i++;
     }
 
@@ -188,7 +188,7 @@ void PolyphaseMergeSort<IntegerType>::FilesInit(const char * SourceFile, size_t 
 
         MinElmOfCurrChunk = Buffer[0];
 
-        if (MaxElmOfPrevChunk != INT32_MAX && MaxElmOfPrevChunk < MinElmOfCurrChunk) {
+        if (MaxElmOfPrevChunk != std::numeric_limits<IntegerType>::max() && MaxElmOfPrevChunk < MinElmOfCurrChunk) {
             Buffer[0] = MaxElmOfPrevChunk;
             fseek(SetOfFiles[i], -numSize, SEEK_CUR);
             fwrite(&MinElmOfCurrChunk, numSize, 1, SetOfFiles[i]);
