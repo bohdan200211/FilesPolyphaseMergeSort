@@ -8,6 +8,8 @@
 #include <cstdio>
 #include <stdexcept>
 
+/// Here was implement standard Binary Heap with min-heap property.
+/// (no comments)
 template<typename Key, typename Data>
 class BinaryHeap {
 private:
