@@ -8,10 +8,10 @@ template<typename IntegerType> const char * PolyphaseMergeSort<IntegerType>::ext
 template<typename IntegerType> size_t       PolyphaseMergeSort<IntegerType>::iterations = 1;
 template<typename IntegerType> const size_t PolyphaseMergeSort<IntegerType>::numSize    = sizeof(IntegerType);
 
+
 template<typename IntegerType>
 void PolyphaseMergeSort<IntegerType>::SortFile(const char * SourceFile, const size_t AmountOfFiles, const size_t AmountOfElms,
                                   const size_t AmountOfElmsInChunk, size_t AmountOfThread, Sort version) {
-
     iterations = 1;
 
     const size_t num_of_chunks = AmountOfElms / AmountOfElmsInChunk
