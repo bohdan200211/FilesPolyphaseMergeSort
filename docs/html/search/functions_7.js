@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7ebinaryheap_43',['~BinaryHeap',['../class_binary_heap.html#a44e43505e741bba52ed77815bc0e6f40',1,'BinaryHeap']]]
+  ['heapify_60',['heapify',['../class_binary_heap.html#a47335f8665e99c2680727146c514989e',1,'BinaryHeap']]]
 ];

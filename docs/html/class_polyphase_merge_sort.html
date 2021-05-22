@@ -86,6 +86,8 @@ $(document).ready(function(){initNavTree('class_polyphase_merge_sort.html',''); 
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_polyphase_merge_sort-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PolyphaseMergeSort&lt; IntegerType &gt; Class Template Reference</div>  </div>
@@ -107,6 +109,26 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a6617f49c091752162094b26319756f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab52fca08a28b3047c57e0db87df8fb35"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polyphase_merge_sort.html#ab52fca08a28b3047c57e0db87df8fb35">isSorted</a> (const char *file)</td></tr>
 <tr class="separator:ab52fca08a28b3047c57e0db87df8fb35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a6bbc64f43fb8f9153eb4bcf11013c174"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polyphase_merge_sort.html#a6bbc64f43fb8f9153eb4bcf11013c174">FilesInit</a> (const char *SourceFile, size_t AmountOfChunks, FILE **SetOfFiles, const size_t *AmountOfChunksInFile, size_t AmountOfElmsInChunk, size_t AmountOfElms, size_t AmountOfThread, <a class="el" href="class_polyphase_merge_sort.html#a73c3f432d45d3420ac936595eb81c828">Sort</a> version=<a class="el" href="class_polyphase_merge_sort.html#a73c3f432d45d3420ac936595eb81c828a6c333e2e8191974a649c9ce4ff2ce316">Sort::Sort2</a>)</td></tr>
+<tr class="separator:a6bbc64f43fb8f9153eb4bcf11013c174"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e8aeea0ce8adf4458cdc48699f05854"><td class="memItemLeft" align="right" valign="top">static size_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polyphase_merge_sort.html#a5e8aeea0ce8adf4458cdc48699f05854">CreateSplitList</a> (size_t AmountOfFiles, size_t AmountOfChunks)</td></tr>
+<tr class="separator:a5e8aeea0ce8adf4458cdc48699f05854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eee1640b235ed82d43524e089712f64"><td class="memItemLeft" align="right" valign="top">static FILE **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polyphase_merge_sort.html#a0eee1640b235ed82d43524e089712f64">CreatePtrFilesByAmount</a> (size_t n)</td></tr>
+<tr class="separator:a0eee1640b235ed82d43524e089712f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a4d0d8d1f76ff5450c9255655fbbe67"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polyphase_merge_sort.html#a8a4d0d8d1f76ff5450c9255655fbbe67">GetFilenameByNumber</a> (size_t num)</td></tr>
+<tr class="separator:a8a4d0d8d1f76ff5450c9255655fbbe67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a47f9d56352ece66cc60f4ef1b4f31a3c"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polyphase_merge_sort.html#a47f9d56352ece66cc60f4ef1b4f31a3c">extension</a> = &quot;.bin&quot;</td></tr>
+<tr class="separator:a47f9d56352ece66cc60f4ef1b4f31a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a355ca21f5751217177b9423099aaf609"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polyphase_merge_sort.html#a355ca21f5751217177b9423099aaf609">iterations</a> = 1</td></tr>
+<tr class="separator:a355ca21f5751217177b9423099aaf609"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85876237fe7eb53d2acba473c0d44a3d"><td class="memItemLeft" align="right" valign="top">static const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polyphase_merge_sort.html#a85876237fe7eb53d2acba473c0d44a3d">numSize</a> = sizeof(IntegerType)</td></tr>
+<tr class="separator:a85876237fe7eb53d2acba473c0d44a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a73c3f432d45d3420ac936595eb81c828"></a>
@@ -138,6 +160,174 @@ template&lt;typename IntegerType &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0eee1640b235ed82d43524e089712f64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eee1640b235ed82d43524e089712f64">&#9670;&nbsp;</a></span>CreatePtrFilesByAmount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IntegerType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE ** <a class="el" href="class_polyphase_merge_sort.html">PolyphaseMergeSort</a>&lt; IntegerType &gt;::CreatePtrFilesByAmount </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e8aeea0ce8adf4458cdc48699f05854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e8aeea0ce8adf4458cdc48699f05854">&#9670;&nbsp;</a></span>CreateSplitList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IntegerType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t * <a class="el" href="class_polyphase_merge_sort.html">PolyphaseMergeSort</a>&lt; IntegerType &gt;::CreateSplitList </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>AmountOfFiles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>AmountOfChunks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6bbc64f43fb8f9153eb4bcf11013c174"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bbc64f43fb8f9153eb4bcf11013c174">&#9670;&nbsp;</a></span>FilesInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IntegerType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_polyphase_merge_sort.html">PolyphaseMergeSort</a>&lt; IntegerType &gt;::FilesInit </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>SourceFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>AmountOfChunks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE **&#160;</td>
+          <td class="paramname"><em>SetOfFiles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t *&#160;</td>
+          <td class="paramname"><em>AmountOfChunksInFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>AmountOfElmsInChunk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>AmountOfElms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>AmountOfThread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_polyphase_merge_sort.html#a73c3f432d45d3420ac936595eb81c828">Sort</a>&#160;</td>
+          <td class="paramname"><em>version</em> = <code><a class="el" href="class_polyphase_merge_sort.html#a73c3f432d45d3420ac936595eb81c828a6c333e2e8191974a649c9ce4ff2ce316">Sort::Sort2</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a4d0d8d1f76ff5450c9255655fbbe67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a4d0d8d1f76ff5450c9255655fbbe67">&#9670;&nbsp;</a></span>GetFilenameByNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IntegerType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="class_polyphase_merge_sort.html">PolyphaseMergeSort</a>&lt; IntegerType &gt;::GetFilenameByNumber </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab52fca08a28b3047c57e0db87df8fb35"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab52fca08a28b3047c57e0db87df8fb35">&#9670;&nbsp;</a></span>isSorted()</h2>
 
@@ -222,6 +412,79 @@ template&lt;typename IntegerType &gt; </div>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a47f9d56352ece66cc60f4ef1b4f31a3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47f9d56352ece66cc60f4ef1b4f31a3c">&#9670;&nbsp;</a></span>extension</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IntegerType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * <a class="el" href="class_polyphase_merge_sort.html">PolyphaseMergeSort</a>&lt; IntegerType &gt;::extension = &quot;.bin&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a355ca21f5751217177b9423099aaf609"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a355ca21f5751217177b9423099aaf609">&#9670;&nbsp;</a></span>iterations</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IntegerType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="class_polyphase_merge_sort.html">PolyphaseMergeSort</a>&lt; IntegerType &gt;::iterations = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85876237fe7eb53d2acba473c0d44a3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85876237fe7eb53d2acba473c0d44a3d">&#9670;&nbsp;</a></span>numSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IntegerType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t <a class="el" href="class_polyphase_merge_sort.html">PolyphaseMergeSort</a>&lt; IntegerType &gt;::numSize = sizeof(IntegerType)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

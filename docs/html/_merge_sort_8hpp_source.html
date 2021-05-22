@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: SortArray/MergeSort.hpp Source File</title>
+<title>My Project: include/SortArray/MergeSort.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -105,32 +105,39 @@ $(document).ready(function(){initNavTree('_merge_sort_8hpp_source.html',''); ini
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Type&gt;</div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_merge_sort.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_merge_sort.html">MergeSort</a> {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_merge_sort.html#a5c58dc83dc001df90d38ca7255f9b28f">Sort1</a> (Type * A, <span class="keywordtype">size_t</span> n, <span class="keywordtype">size_t</span> AmountOfTh);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_merge_sort.html#ac7c9453d953881c654a589d1f5cf4e74">Sort2</a> (Type * A, <span class="keywordtype">size_t</span> n, <span class="keywordtype">size_t</span> AmountOfTh);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_merge_sort.html#a5c58dc83dc001df90d38ca7255f9b28f">Sort1</a> (Type * A, <span class="keywordtype">size_t</span> n, <span class="keywordtype">size_t</span> AmountOfTh);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_merge_sort.html#ae39f924d3e934b395b5d1b8ab5b70056">PrintArr</a> (Type * A, <span class="keywordtype">size_t</span> n);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_merge_sort.html#ae882d203853e3d40aa290523dbeafc31">isSorted</a> (Type * A, <span class="keywordtype">size_t</span> n);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_merge_sort.html#ac7c9453d953881c654a589d1f5cf4e74">Sort2</a> (Type * A, <span class="keywordtype">size_t</span> n, <span class="keywordtype">size_t</span> AmountOfTh);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> _sort2 (Type * A, <span class="keywordtype">int</span> left, <span class="keywordtype">int</span> right, <span class="keywordtype">size_t</span> AmountOfTh);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_merge_sort.html#ae39f924d3e934b395b5d1b8ab5b70056">PrintArr</a> (Type * A, <span class="keywordtype">size_t</span> n);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> _merge1 (Type * out, <span class="keyword">const</span> Type * in, <span class="keyword">const</span> <span class="keywordtype">size_t</span> * Intervals, <span class="keywordtype">size_t</span> AmountOfThreads);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> _merge2 (Type * A, <span class="keywordtype">int</span> left, <span class="keywordtype">int</span> mid, <span class="keywordtype">int</span> right);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_merge_sort_8inl.html">MergeSort.inl</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_merge_sort.html#ae882d203853e3d40aa290523dbeafc31">isSorted</a> (Type * A, <span class="keywordtype">size_t</span> n);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_merge_sort.html#aab65cc0747cfd0efd36aaf2b4603a229">_sort2</a> (Type * A, <span class="keywordtype">int</span> left, <span class="keywordtype">int</span> right, <span class="keywordtype">size_t</span> AmountOfTh);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_merge_sort.html#a60a1ffbf0828fa80caaab9eff48af30b">_merge1</a> (Type * out, <span class="keyword">const</span> Type * in, <span class="keyword">const</span> <span class="keywordtype">size_t</span> * Intervals, <span class="keywordtype">size_t</span> N);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_merge_sort.html#a20b42dadfe1c905aa311ec5359aabdd9">_merge2</a> (Type * A, <span class="keywordtype">int</span> left, <span class="keywordtype">int</span> mid, <span class="keywordtype">int</span> right);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_merge_sort_8inl.html">MergeSort.inl</a>&quot;</span></div>
 <div class="ttc" id="a_merge_sort_8inl_html"><div class="ttname"><a href="_merge_sort_8inl.html">MergeSort.inl</a></div></div>
 <div class="ttc" id="aclass_merge_sort_html"><div class="ttname"><a href="class_merge_sort.html">MergeSort</a></div><div class="ttdef"><b>Definition:</b> MergeSort.hpp:17</div></div>
-<div class="ttc" id="aclass_merge_sort_html_a5c58dc83dc001df90d38ca7255f9b28f"><div class="ttname"><a href="class_merge_sort.html#a5c58dc83dc001df90d38ca7255f9b28f">MergeSort::Sort1</a></div><div class="ttdeci">static void Sort1(Type *A, size_t n, size_t AmountOfTh)</div><div class="ttdef"><b>Definition:</b> MergeSort.inl:7</div></div>
-<div class="ttc" id="aclass_merge_sort_html_ac7c9453d953881c654a589d1f5cf4e74"><div class="ttname"><a href="class_merge_sort.html#ac7c9453d953881c654a589d1f5cf4e74">MergeSort::Sort2</a></div><div class="ttdeci">static void Sort2(Type *A, size_t n, size_t AmountOfTh)</div><div class="ttdef"><b>Definition:</b> MergeSort.inl:81</div></div>
-<div class="ttc" id="aclass_merge_sort_html_ae39f924d3e934b395b5d1b8ab5b70056"><div class="ttname"><a href="class_merge_sort.html#ae39f924d3e934b395b5d1b8ab5b70056">MergeSort::PrintArr</a></div><div class="ttdeci">static void PrintArr(Type *A, size_t n)</div><div class="ttdef"><b>Definition:</b> MergeSort.inl:87</div></div>
-<div class="ttc" id="aclass_merge_sort_html_ae882d203853e3d40aa290523dbeafc31"><div class="ttname"><a href="class_merge_sort.html#ae882d203853e3d40aa290523dbeafc31">MergeSort::isSorted</a></div><div class="ttdeci">static bool isSorted(Type *A, size_t n)</div><div class="ttdef"><b>Definition:</b> MergeSort.inl:95</div></div>
+<div class="ttc" id="aclass_merge_sort_html_a20b42dadfe1c905aa311ec5359aabdd9"><div class="ttname"><a href="class_merge_sort.html#a20b42dadfe1c905aa311ec5359aabdd9">MergeSort::_merge2</a></div><div class="ttdeci">static void _merge2(Type *A, int left, int mid, int right)</div><div class="ttdef"><b>Definition:</b> MergeSort.inl:167</div></div>
+<div class="ttc" id="aclass_merge_sort_html_a5c58dc83dc001df90d38ca7255f9b28f"><div class="ttname"><a href="class_merge_sort.html#a5c58dc83dc001df90d38ca7255f9b28f">MergeSort::Sort1</a></div><div class="ttdeci">static void Sort1(Type *A, size_t n, size_t AmountOfTh)</div><div class="ttdoc">This algorithm create Split-List also know as Intervals from _merge1() sorts N subarrays.</div><div class="ttdef"><b>Definition:</b> MergeSort.inl:7</div></div>
+<div class="ttc" id="aclass_merge_sort_html_a60a1ffbf0828fa80caaab9eff48af30b"><div class="ttname"><a href="class_merge_sort.html#a60a1ffbf0828fa80caaab9eff48af30b">MergeSort::_merge1</a></div><div class="ttdeci">static void _merge1(Type *out, const Type *in, const size_t *Intervals, size_t N)</div><div class="ttdef"><b>Definition:</b> MergeSort.inl:134</div></div>
+<div class="ttc" id="aclass_merge_sort_html_aab65cc0747cfd0efd36aaf2b4603a229"><div class="ttname"><a href="class_merge_sort.html#aab65cc0747cfd0efd36aaf2b4603a229">MergeSort::_sort2</a></div><div class="ttdeci">static void _sort2(Type *A, int left, int right, size_t AmountOfTh)</div><div class="ttdef"><b>Definition:</b> MergeSort.inl:108</div></div>
+<div class="ttc" id="aclass_merge_sort_html_ac7c9453d953881c654a589d1f5cf4e74"><div class="ttname"><a href="class_merge_sort.html#ac7c9453d953881c654a589d1f5cf4e74">MergeSort::Sort2</a></div><div class="ttdeci">static void Sort2(Type *A, size_t n, size_t AmountOfTh)</div><div class="ttdoc">The start point of _sort2() function.</div><div class="ttdef"><b>Definition:</b> MergeSort.inl:81</div></div>
+<div class="ttc" id="aclass_merge_sort_html_ae39f924d3e934b395b5d1b8ab5b70056"><div class="ttname"><a href="class_merge_sort.html#ae39f924d3e934b395b5d1b8ab5b70056">MergeSort::PrintArr</a></div><div class="ttdeci">static void PrintArr(Type *A, size_t n)</div><div class="ttdoc">Print Array in one row divided by Space.</div><div class="ttdef"><b>Definition:</b> MergeSort.inl:87</div></div>
+<div class="ttc" id="aclass_merge_sort_html_ae882d203853e3d40aa290523dbeafc31"><div class="ttname"><a href="class_merge_sort.html#ae882d203853e3d40aa290523dbeafc31">MergeSort::isSorted</a></div><div class="ttdeci">static bool isSorted(Type *A, size_t n)</div><div class="ttdoc">The simple method that can check array for Sorted-property.</div><div class="ttdef"><b>Definition:</b> MergeSort.inl:96</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_7647affe517a8d81e573354d3f6d047d.html">SortArray</a></li><li class="navelem"><a class="el" href="_merge_sort_8hpp.html">MergeSort.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_fbbf8003c5fad4ebb1f85f340886611e.html">SortArray</a></li><li class="navelem"><a class="el" href="_merge_sort_8hpp.html">MergeSort.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

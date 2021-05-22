@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getminimum_34',['GetMinimum',['../class_binary_heap.html#a07c3cce8c75997a8aff3ef489eff9f7f',1,'BinaryHeap']]]
+  ['decreasekey_55',['DecreaseKey',['../class_binary_heap.html#a0bc25ae4e73669fab7d00ba993f025ce',1,'BinaryHeap']]]
 ];

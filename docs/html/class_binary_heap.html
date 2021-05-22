@@ -85,6 +85,9 @@ $(document).ready(function(){initNavTree('class_binary_heap.html',''); initResiz
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_binary_heap-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">BinaryHeap&lt; Key, Data &gt; Class Template Reference</div>  </div>
@@ -101,23 +104,73 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a44e43505e741bba52ed77815bc0e6f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab906df2876f5bcd3c56ad4c4b23942d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_binary_heap.html#ab906df2876f5bcd3c56ad4c4b23942d0">isEmpty</a> () const</td></tr>
 <tr class="separator:ab906df2876f5bcd3c56ad4c4b23942d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07c3cce8c75997a8aff3ef489eff9f7f"><td class="memItemLeft" align="right" valign="top">Elm &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_binary_heap.html#a07c3cce8c75997a8aff3ef489eff9f7f">GetMinimum</a> () const</td></tr>
+<tr class="memitem:a07c3cce8c75997a8aff3ef489eff9f7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_binary_heap.html#a9db17b7a0943e987b9d0101f61a59507">Elm</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_binary_heap.html#a07c3cce8c75997a8aff3ef489eff9f7f">GetMinimum</a> () const</td></tr>
 <tr class="separator:a07c3cce8c75997a8aff3ef489eff9f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4555839b8aff42bd798793f436905c56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_binary_heap.html#a4555839b8aff42bd798793f436905c56">ExtractMinimum</a> ()</td></tr>
 <tr class="separator:a4555839b8aff42bd798793f436905c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa06cb71f0b926a9bedbd3bd4ad8641ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_binary_heap.html#aa06cb71f0b926a9bedbd3bd4ad8641ac">Insert</a> (const Elm &amp;x)</td></tr>
+<tr class="memitem:aa06cb71f0b926a9bedbd3bd4ad8641ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_binary_heap.html#aa06cb71f0b926a9bedbd3bd4ad8641ac">Insert</a> (const <a class="el" href="class_binary_heap.html#a9db17b7a0943e987b9d0101f61a59507">Elm</a> &amp;x)</td></tr>
 <tr class="separator:aa06cb71f0b926a9bedbd3bd4ad8641ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bc25ae4e73669fab7d00ba993f025ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_binary_heap.html#a0bc25ae4e73669fab7d00ba993f025ce">DecreaseKey</a> (size_t index, const Key &amp;newKey)</td></tr>
 <tr class="separator:a0bc25ae4e73669fab7d00ba993f025ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4314bfb2caf67aeaea7d2975bd44a1e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_binary_heap.html#a4314bfb2caf67aeaea7d2975bd44a1e2">IncreaseKey</a> (size_t index, const Key &amp;newKey)</td></tr>
 <tr class="separator:a4314bfb2caf67aeaea7d2975bd44a1e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a9db17b7a0943e987b9d0101f61a59507"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_binary_heap.html#a9db17b7a0943e987b9d0101f61a59507">Elm</a> = std::pair&lt; Key, Data &gt;</td></tr>
+<tr class="separator:a9db17b7a0943e987b9d0101f61a59507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a8c97c2a5d7a67824ea1162f824add45c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_binary_heap.html#a8c97c2a5d7a67824ea1162f824add45c">parent</a> (size_t i) const</td></tr>
+<tr class="separator:a8c97c2a5d7a67824ea1162f824add45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9279b2a51236c16c6bcf561bd21c27e6"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_binary_heap.html#a9279b2a51236c16c6bcf561bd21c27e6">left</a> (size_t i) const</td></tr>
+<tr class="separator:a9279b2a51236c16c6bcf561bd21c27e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a059e9995480261b98ed6b8260a26e6b2"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_binary_heap.html#a059e9995480261b98ed6b8260a26e6b2">right</a> (size_t i) const</td></tr>
+<tr class="separator:a059e9995480261b98ed6b8260a26e6b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47335f8665e99c2680727146c514989e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_binary_heap.html#a47335f8665e99c2680727146c514989e">heapify</a> (size_t index)</td></tr>
+<tr class="separator:a47335f8665e99c2680727146c514989e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:acac5cae367614f2924637d059a9a2302"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_binary_heap.html#acac5cae367614f2924637d059a9a2302">m_Capacity</a></td></tr>
+<tr class="separator:acac5cae367614f2924637d059a9a2302"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51e9db740ba44126e365ded07cbd83a6"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_binary_heap.html#a51e9db740ba44126e365ded07cbd83a6">m_Size</a></td></tr>
+<tr class="separator:a51e9db740ba44126e365ded07cbd83a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af91b8d9731c93f58df051c633047f770"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_binary_heap.html#a9db17b7a0943e987b9d0101f61a59507">Elm</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_binary_heap.html#af91b8d9731c93f58df051c633047f770">m_Heap</a></td></tr>
+<tr class="separator:af91b8d9731c93f58df051c633047f770"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename Key, typename Data&gt;<br />
 class BinaryHeap&lt; Key, Data &gt;</h3>
 
-<p>Here was implement standard Binary Heap with min-heap property. (no comments) </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p>Here was implement standard Binary Heap with min-heap property. </p><dl class="section see"><dt>See also</dt><dd><a href="https://www.andrew.cmu.edu/course/15-121/lectures/Binary%20Heaps/heaps.html">https://www.andrew.cmu.edu/course/15-121/lectures/Binary%20Heaps/heaps.html</a> </dd></dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a9db17b7a0943e987b9d0101f61a59507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9db17b7a0943e987b9d0101f61a59507">&#9670;&nbsp;</a></span>Elm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename Data &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_binary_heap.html">BinaryHeap</a>&lt; Key, Data &gt;::<a class="el" href="class_binary_heap.html#a9db17b7a0943e987b9d0101f61a59507">Elm</a> =  std::pair&lt;Key, Data&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a022a7e1efc85ad4a0b5ee1930a4a7874"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a022a7e1efc85ad4a0b5ee1930a4a7874">&#9670;&nbsp;</a></span>BinaryHeap()</h2>
 
@@ -210,9 +263,37 @@ template&lt;typename Key , typename Data &gt; </div>
 template&lt;typename Key , typename Data &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_binary_heap.html">BinaryHeap</a>&lt; Key, Data &gt;::Elm &amp; <a class="el" href="class_binary_heap.html">BinaryHeap</a>&lt; Key, Data &gt;::GetMinimum</td>
+          <td class="memname"><a class="el" href="class_binary_heap.html">BinaryHeap</a>&lt; Key, Data &gt;::<a class="el" href="class_binary_heap.html#a9db17b7a0943e987b9d0101f61a59507">Elm</a> &amp; <a class="el" href="class_binary_heap.html">BinaryHeap</a>&lt; Key, Data &gt;::GetMinimum</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47335f8665e99c2680727146c514989e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47335f8665e99c2680727146c514989e">&#9670;&nbsp;</a></span>heapify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename Data &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_binary_heap.html">BinaryHeap</a>&lt; Key, Data &gt;::heapify </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -258,7 +339,7 @@ template&lt;typename Key , typename Data &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="class_binary_heap.html">BinaryHeap</a>&lt; Key, Data &gt;::Insert </td>
           <td>(</td>
-          <td class="paramtype">const Elm &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_binary_heap.html#a9db17b7a0943e987b9d0101f61a59507">Elm</a> &amp;&#160;</td>
           <td class="paramname"><em>x</em></td><td>)</td>
           <td></td>
         </tr>
@@ -288,6 +369,163 @@ template&lt;typename Key , typename Data &gt; </div>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9279b2a51236c16c6bcf561bd21c27e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9279b2a51236c16c6bcf561bd21c27e6">&#9670;&nbsp;</a></span>left()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename Data &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="class_binary_heap.html">BinaryHeap</a>&lt; Key, Data &gt;::left </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c97c2a5d7a67824ea1162f824add45c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c97c2a5d7a67824ea1162f824add45c">&#9670;&nbsp;</a></span>parent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename Data &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="class_binary_heap.html">BinaryHeap</a>&lt; Key, Data &gt;::parent </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a059e9995480261b98ed6b8260a26e6b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a059e9995480261b98ed6b8260a26e6b2">&#9670;&nbsp;</a></span>right()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename Data &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="class_binary_heap.html">BinaryHeap</a>&lt; Key, Data &gt;::right </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="acac5cae367614f2924637d059a9a2302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acac5cae367614f2924637d059a9a2302">&#9670;&nbsp;</a></span>m_Capacity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename Data &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="class_binary_heap.html">BinaryHeap</a>&lt; Key, Data &gt;::m_Capacity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af91b8d9731c93f58df051c633047f770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af91b8d9731c93f58df051c633047f770">&#9670;&nbsp;</a></span>m_Heap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename Data &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_binary_heap.html#a9db17b7a0943e987b9d0101f61a59507">Elm</a>* <a class="el" href="class_binary_heap.html">BinaryHeap</a>&lt; Key, Data &gt;::m_Heap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51e9db740ba44126e365ded07cbd83a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51e9db740ba44126e365ded07cbd83a6">&#9670;&nbsp;</a></span>m_Size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key , typename Data &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="class_binary_heap.html">BinaryHeap</a>&lt; Key, Data &gt;::m_Size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

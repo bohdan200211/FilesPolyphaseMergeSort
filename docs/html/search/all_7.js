@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['sort_17',['Sort',['../class_polyphase_merge_sort.html#a73c3f432d45d3420ac936595eb81c828',1,'PolyphaseMergeSort']]],
-  ['sort1_18',['Sort1',['../class_merge_sort.html#a5c58dc83dc001df90d38ca7255f9b28f',1,'MergeSort::Sort1()'],['../class_polyphase_merge_sort.html#a73c3f432d45d3420ac936595eb81c828a9852fbed8360917d41d7b459624dfae1',1,'PolyphaseMergeSort::Sort1()']]],
-  ['sort2_19',['Sort2',['../class_merge_sort.html#ac7c9453d953881c654a589d1f5cf4e74',1,'MergeSort::Sort2()'],['../class_polyphase_merge_sort.html#a73c3f432d45d3420ac936595eb81c828a6c333e2e8191974a649c9ce4ff2ce316',1,'PolyphaseMergeSort::Sort2()']]],
-  ['sortfile_20',['SortFile',['../class_polyphase_merge_sort.html#a6617f49c091752162094b26319756f06',1,'PolyphaseMergeSort']]]
+  ['heapify_15',['heapify',['../class_binary_heap.html#a47335f8665e99c2680727146c514989e',1,'BinaryHeap']]]
 ];

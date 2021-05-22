@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['binaryheap_0',['BinaryHeap',['../class_binary_heap.html',1,'BinaryHeap&lt; Key, Data &gt;'],['../class_binary_heap.html#a022a7e1efc85ad4a0b5ee1930a4a7874',1,'BinaryHeap::BinaryHeap()']]],
-  ['binaryheap_2ehpp_1',['BinaryHeap.hpp',['../_binary_heap_8hpp.html',1,'']]],
-  ['binaryheap_2einl_2',['BinaryHeap.inl',['../_binary_heap_8inl.html',1,'']]]
+  ['_5fmerge1_0',['_merge1',['../class_merge_sort.html#a60a1ffbf0828fa80caaab9eff48af30b',1,'MergeSort']]],
+  ['_5fmerge2_1',['_merge2',['../class_merge_sort.html#a20b42dadfe1c905aa311ec5359aabdd9',1,'MergeSort']]],
+  ['_5fsort2_2',['_sort2',['../class_merge_sort.html#aab65cc0747cfd0efd36aaf2b4603a229',1,'MergeSort']]]
 ];

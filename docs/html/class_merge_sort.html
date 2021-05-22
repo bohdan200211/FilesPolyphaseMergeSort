@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('class_merge_sort.html',''); initResiza
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="class_merge_sort-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">MergeSort&lt; Type &gt; Class Template Reference</div>  </div>
@@ -96,15 +97,189 @@ $(document).ready(function(){initNavTree('class_merge_sort.html',''); initResiza
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a5c58dc83dc001df90d38ca7255f9b28f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_merge_sort.html#a5c58dc83dc001df90d38ca7255f9b28f">Sort1</a> (Type *A, size_t n, size_t AmountOfTh)</td></tr>
+<tr class="memdesc:a5c58dc83dc001df90d38ca7255f9b28f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This algorithm create Split-List also know as Intervals from <a class="el" href="class_merge_sort.html#a60a1ffbf0828fa80caaab9eff48af30b">_merge1()</a> sorts N subarrays.  <a href="class_merge_sort.html#a5c58dc83dc001df90d38ca7255f9b28f">More...</a><br /></td></tr>
 <tr class="separator:a5c58dc83dc001df90d38ca7255f9b28f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7c9453d953881c654a589d1f5cf4e74"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_merge_sort.html#ac7c9453d953881c654a589d1f5cf4e74">Sort2</a> (Type *A, size_t n, size_t AmountOfTh)</td></tr>
+<tr class="memdesc:ac7c9453d953881c654a589d1f5cf4e74"><td class="mdescLeft">&#160;</td><td class="mdescRight">The start point of <a class="el" href="class_merge_sort.html#aab65cc0747cfd0efd36aaf2b4603a229">_sort2()</a> function.  <a href="class_merge_sort.html#ac7c9453d953881c654a589d1f5cf4e74">More...</a><br /></td></tr>
 <tr class="separator:ac7c9453d953881c654a589d1f5cf4e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae39f924d3e934b395b5d1b8ab5b70056"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_merge_sort.html#ae39f924d3e934b395b5d1b8ab5b70056">PrintArr</a> (Type *A, size_t n)</td></tr>
+<tr class="memdesc:ae39f924d3e934b395b5d1b8ab5b70056"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print Array in one row divided by Space.  <a href="class_merge_sort.html#ae39f924d3e934b395b5d1b8ab5b70056">More...</a><br /></td></tr>
 <tr class="separator:ae39f924d3e934b395b5d1b8ab5b70056"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae882d203853e3d40aa290523dbeafc31"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_merge_sort.html#ae882d203853e3d40aa290523dbeafc31">isSorted</a> (Type *A, size_t n)</td></tr>
+<tr class="memdesc:ae882d203853e3d40aa290523dbeafc31"><td class="mdescLeft">&#160;</td><td class="mdescRight">The simple method that can check array for Sorted-property.  <a href="class_merge_sort.html#ae882d203853e3d40aa290523dbeafc31">More...</a><br /></td></tr>
 <tr class="separator:ae882d203853e3d40aa290523dbeafc31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:aab65cc0747cfd0efd36aaf2b4603a229"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_merge_sort.html#aab65cc0747cfd0efd36aaf2b4603a229">_sort2</a> (Type *A, int left, int right, size_t AmountOfTh)</td></tr>
+<tr class="separator:aab65cc0747cfd0efd36aaf2b4603a229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60a1ffbf0828fa80caaab9eff48af30b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_merge_sort.html#a60a1ffbf0828fa80caaab9eff48af30b">_merge1</a> (Type *out, const Type *in, const size_t *Intervals, size_t N)</td></tr>
+<tr class="separator:a60a1ffbf0828fa80caaab9eff48af30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20b42dadfe1c905aa311ec5359aabdd9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_merge_sort.html#a20b42dadfe1c905aa311ec5359aabdd9">_merge2</a> (Type *A, int left, int mid, int right)</td></tr>
+<tr class="separator:a20b42dadfe1c905aa311ec5359aabdd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a60a1ffbf0828fa80caaab9eff48af30b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60a1ffbf0828fa80caaab9eff48af30b">&#9670;&nbsp;</a></span>_merge1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_merge_sort.html">MergeSort</a>&lt; Type &gt;::_merge1 </td>
+          <td>(</td>
+          <td class="paramtype">Type *&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Type *&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t *&#160;</td>
+          <td class="paramname"><em>Intervals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>N</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This algorithm sorts N sorted subarrays in 1 array using <a class="el" href="class_binary_heap.html">BinaryHeap</a> Binary Heap with min-heap property. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Array that contains N sorted subarrays </td></tr>
+    <tr><td class="paramname">Intervals</td><td>Array that indicates where each subarray ends. Example [ Intervals[i - 1], Intervals[i] ) indicates where the i-subarray ends(i counts from 0 to N - 1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a href="https://www.geeksforgeeks.org/merge-k-sorted-arrays/">https://www.geeksforgeeks.org/merge-k-sorted-arrays/</a> or other sources </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>N - this is value that indicates amount of sorted subarrays </dd></dl>
+
+</div>
+</div>
+<a id="a20b42dadfe1c905aa311ec5359aabdd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20b42dadfe1c905aa311ec5359aabdd9">&#9670;&nbsp;</a></span>_merge2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_merge_sort.html">MergeSort</a>&lt; Type &gt;::_merge2 </td>
+          <td>(</td>
+          <td class="paramtype">Type *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This is the basic Merge() algorithm that used in the Simple Merge Sort </p><dl class="section see"><dt>See also</dt><dd><a href="https://www.geeksforgeeks.org/merge-sort/">https://www.geeksforgeeks.org/merge-sort/</a> or other sources </dd></dl>
+
+</div>
+</div>
+<a id="aab65cc0747cfd0efd36aaf2b4603a229"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab65cc0747cfd0efd36aaf2b4603a229">&#9670;&nbsp;</a></span>_sort2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_merge_sort.html">MergeSort</a>&lt; Type &gt;::_sort2 </td>
+          <td>(</td>
+          <td class="paramtype">Type *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>AmountOfTh</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This is the recursively algorithm that splits the A in half and evoke _sort2(A1.left, A2.right, AmountOfTh / 2) for each part. </p><dl class="section see"><dt>See also</dt><dd>T.Cormen Introduction to Algorithms. Theme: The Concurrency Merge Sort algorithm </dd></dl>
+
+</div>
+</div>
 <a id="ae882d203853e3d40aa290523dbeafc31"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae882d203853e3d40aa290523dbeafc31">&#9670;&nbsp;</a></span>isSorted()</h2>
 
@@ -140,6 +315,8 @@ template&lt;typename Type &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The simple method that can check array for Sorted-property. </p>
 
 </div>
 </div>
@@ -178,6 +355,8 @@ template&lt;typename Type &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Print Array in one row divided by Space. </p>
 
 </div>
 </div>
@@ -223,6 +402,8 @@ template&lt;typename Type &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>This algorithm create Split-List also know as Intervals from <a class="el" href="class_merge_sort.html#a60a1ffbf0828fa80caaab9eff48af30b">_merge1()</a> sorts N subarrays. </p>
+
 </div>
 </div>
 <a id="ac7c9453d953881c654a589d1f5cf4e74"></a>
@@ -266,6 +447,8 @@ template&lt;typename Type &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The start point of <a class="el" href="class_merge_sort.html#aab65cc0747cfd0efd36aaf2b4603a229">_sort2()</a> function. </p>
 
 </div>
 </div>

@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['mergesort_10',['MergeSort',['../class_merge_sort.html',1,'']]],
-  ['mergesort_2ehpp_11',['MergeSort.hpp',['../_merge_sort_8hpp.html',1,'']]],
-  ['mergesort_2einl_12',['MergeSort.inl',['../_merge_sort_8inl.html',1,'']]]
+  ['filesinit_12',['FilesInit',['../class_polyphase_merge_sort.html#a6bbc64f43fb8f9153eb4bcf11013c174',1,'PolyphaseMergeSort']]]
 ];
