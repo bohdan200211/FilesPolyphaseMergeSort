@@ -9,7 +9,7 @@
 #include <stdexcept>
 
 /// Here was implement standard Binary Heap with min-heap property.
-/// (no comments)
+/// @see https://www.andrew.cmu.edu/course/15-121/lectures/Binary%20Heaps/heaps.html
 template<typename Key, typename Data>
 class BinaryHeap {
 private:
