@@ -91,6 +91,7 @@ void MergeSort<Type>::PrintArr (Type * A, const size_t n) {
     std::cout << std::endl;
 }
 
+
 template<typename Type>
 bool MergeSort<Type>::isSorted (Type * A, const size_t n) {
     for (int i = 1; i < n; ++i) {
@@ -130,16 +131,16 @@ void MergeSort<Type>::_sort2 (Type * A, int left, int right, size_t AmountOfTh) 
 
 
 template<typename Type>
-void MergeSort<Type>::_merge1 (Type * out, const Type * in, const size_t * Intervals, const size_t AmountOfThreads) {
-    const size_t n = Intervals[AmountOfThreads - 1];
+void MergeSort<Type>::_merge1 (Type * out, const Type * in, const size_t * Intervals, const size_t N) {
+    const size_t n = Intervals[N - 1];
 
 //    < Key, { currPoint, EndPoint } >
-    BinaryHeap<Type, std::pair<size_t, size_t>> Heap(AmountOfThreads);
+    BinaryHeap<Type, std::pair<size_t, size_t>> Heap(N);
 
 
     //create init "Heap"
     Heap.Insert({ in[0], { 0, Intervals[1] } });
-    for (int i = 0; i < AmountOfThreads - 1; ++i) {
+    for (int i = 0; i < N - 1; ++i) {
         Heap.Insert({ in[Intervals[i]], { Intervals[i], Intervals[i + 1] } });
     }
 
@@ -160,6 +161,7 @@ void MergeSort<Type>::_merge1 (Type * out, const Type * in, const size_t * Inter
         }
     }
 }
+
 
 template<typename Type>
 void MergeSort<Type>::_merge2 (Type * A, int left, int mid, int right) { //A - arr that will returned
