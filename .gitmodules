@@ -4,3 +4,6 @@
 [submodule "extern/libfort"]
 	path = extern/libfort
 	url = https://github.com/seleznevae/libfort
+[submodule "extern/SFML"]
+	path = extern/SFML
+	url = https://github.com/SFML/SFML
